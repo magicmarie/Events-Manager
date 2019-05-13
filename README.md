@@ -1,3 +1,7 @@
+[![Maintainability](https://api.codeclimate.com/v1/badges/9212a76b62515c68fdd8/maintainability)](https://codeclimate.com/github/magicmarie/Events-Manager/maintainability)
+
+[![Test Coverage](https://api.codeclimate.com/v1/badges/9212a76b62515c68fdd8/test_coverage)](https://codeclimate.com/github/magicmarie/Events-Manager/test_coverage)
+
 # Events Manager
 
 An applcaiton that allows you to create, plan, organise and execute your events once approved by the admin.
