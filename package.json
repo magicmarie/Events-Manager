@@ -1,7 +1,7 @@
 {
   "name": "events-mgr",
   "version": "1.0.0",
-  "description": "An applcaiton that allows you to create, plan, organise and execute your events once approved by the admin.",
+  "description": "An applicaton that allows you to create, plan, organise and execute your events once approved by the admin.",
   "main": "index.js",
   "scripts": {
     "test": "jest -u --coverage",
