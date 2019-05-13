@@ -4,6 +4,8 @@
   "description": "An applcaiton that allows you to create, plan, organise and execute your events once approved by the admin.",
   "main": "index.js",
   "scripts": {
+    "test": "jest -u --coverage",
+    "test:watch": "jest --watch",
     "start": "webpack-dev-server --open --hot --mode development",
     "build": "webpack --mode production"
   },
@@ -31,6 +33,9 @@
   "dependencies": {
     "react-redux": "^7.0.3",
     "redux-thunk": "^2.3.0",
-    "redux": "^4.0.1"
+    "redux": "^4.0.1",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.12.1",
+    "react-test-renderer": "^16.8.6"
   }
 }
