@@ -1,10 +1,16 @@
 import React from "react";
-import renderer from "react-test-renderer";
+import { shallow } from 'enzyme';
 import App from "../src/containers/index";
+import Login from "../src/components/Auth/Login"
 
  describe("App", () => {
   it("should render without crashing", () => {
-    const wrapper = renderer.create(<App />);
-    expect(wrapper.toJSON()).toMatchSnapshot();
+    const wrapper = shallow(<App/>);
+    expect(wrapper.instance()).toMatchSnapshot();
+  });
+
+  it ("renders the login component", () => {
+    const wrapper = shallow(<Login/>);
+    expect(wrapper.instance()).toMatchSnapshot();
   });
 });
