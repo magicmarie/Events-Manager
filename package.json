@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "An applicaton that allows you to create, plan, organise and execute your events once approved by the admin.",
   "main": "index.js",
+  "engines": {
+    "node": "12.1.0",
+    "npm": "6.9.0"
+  },
   "scripts": {
     "test": "jest -u --coverage",
     "test:watch": "jest --watch",
@@ -31,11 +35,12 @@
     "webpack-dev-server": "^3.3.1"
   },
   "dependencies": {
-    "react-redux": "^7.0.3",
-    "redux-thunk": "^2.3.0",
-    "redux": "^4.0.1",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.12.1",
-    "react-test-renderer": "^16.8.6"
+    "express": "^4.17.0",
+    "react-redux": "^7.0.3",
+    "react-test-renderer": "^16.8.6",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0"
   }
 }
