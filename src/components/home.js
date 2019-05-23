@@ -1,12 +1,12 @@
-import React from 'react';
-import '../styles/App.scss';
+import React from "react";
+import "../styles/App.scss";
 
- const Home = () => {
+const Home = () => {
   return (
-	  <div>
-		  <h2>Welcome to Events Manager</h2>
-	  </div>
-	)
-}
+    <div>
+      <h2 >Welcome to Events Manager</h2>
+    </div>
+  );
+};
 
- export default Home;
+export default Home;

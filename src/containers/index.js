@@ -6,9 +6,7 @@ import Routes from "../components/routes";
  class App extends Component{
     render() {
         return(
-            <Provider store={store}>
                 <Routes/>
-            </Provider>
         );
     }
 }
