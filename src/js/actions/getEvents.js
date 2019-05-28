@@ -1,9 +1,9 @@
-import axios from "axios";
 import { FETCH_EVENTS_SUCCESS } from "./types";
+import axiosInstance from "../axiosInstance/axiosInstance";
 
 export const getEventsAction = () => dispatch => {
-  return axios
-    .get("https://my-json-server.typicode.com/magicmarie/json-data/Events")
+  return axiosInstance
+    .get("/Events")
     .then(response => {
       dispatch({
         type: FETCH_EVENTS_SUCCESS,

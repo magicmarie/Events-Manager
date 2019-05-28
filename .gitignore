@@ -25,4 +25,4 @@ chrome-user-data
 *.swo
 dist/
 src/styles/*.map
-
+.env
