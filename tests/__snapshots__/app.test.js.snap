@@ -1,5 +1,197 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`App render the home page 1`] = `
+Provider {
+  "_isMounted": true,
+  "context": Object {},
+  "notifySubscribers": [Function],
+  "previousState": Object {},
+  "props": Object {
+    "children": <Memo(ConnectFunction)
+      events={
+        Array [
+          Object {
+            "body": "Come through and attend an awesome meetup. Q&A session too",
+            "id": 1,
+            "image": "https://cdn-images-1.medium.com/max/2600/1*kuyLm10Ry7fi-KlBB9MU3w.jpeg",
+            "title": "ALC LAUNCH",
+            "userId": 1,
+          },
+          Object {
+            "body": "Facebook F8 is a mostly-annual conference held by Facebook, intended for developers and entrepreneurs who build products and services around the website. It was hosted in the San Francisco Bay Area, California, and is now hosted in San Jose, CA in Silicon Valley.",
+            "id": 2,
+            "image": "https://www.india.com/wp-content/uploads/2016/04/184.jpg",
+            "title": "F8 VIEWING PARTY",
+            "userId": 1,
+          },
+        ]
+      }
+      getEventsAction={[MockFunction]}
+    />,
+    "store": Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    },
+  },
+  "refs": Object {},
+  "setState": [Function],
+  "state": Object {
+    "store": Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    },
+    "subscription": Subscription {
+      "handleChangeWrapper": [Function],
+      "listeners": Object {
+        "clear": [Function],
+        "get": [Function],
+        "notify": [Function],
+        "subscribe": [Function],
+      },
+      "onStateChange": [Function],
+      "parentSub": undefined,
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "unsubscribe": [Function],
+    },
+  },
+  "updater": Updater {
+    "_callbacks": Array [],
+    "_renderer": ReactShallowRenderer {
+      "_context": Object {},
+      "_didScheduleRenderPhaseUpdate": false,
+      "_dispatcher": Object {
+        "readContext": [Function],
+        "useCallback": [Function],
+        "useContext": [Function],
+        "useDebugValue": [Function],
+        "useEffect": [Function],
+        "useImperativeHandle": [Function],
+        "useLayoutEffect": [Function],
+        "useMemo": [Function],
+        "useReducer": [Function],
+        "useRef": [Function],
+        "useState": [Function],
+      },
+      "_element": <Provider
+        store={
+          Object {
+            "clearActions": [Function],
+            "dispatch": [Function],
+            "getActions": [Function],
+            "getState": [Function],
+            "replaceReducer": [Function],
+            "subscribe": [Function],
+          }
+        }
+      >
+        <Memo(ConnectFunction)
+          events={
+            Array [
+              Object {
+                "body": "Come through and attend an awesome meetup. Q&A session too",
+                "id": 1,
+                "image": "https://cdn-images-1.medium.com/max/2600/1*kuyLm10Ry7fi-KlBB9MU3w.jpeg",
+                "title": "ALC LAUNCH",
+                "userId": 1,
+              },
+              Object {
+                "body": "Facebook F8 is a mostly-annual conference held by Facebook, intended for developers and entrepreneurs who build products and services around the website. It was hosted in the San Francisco Bay Area, California, and is now hosted in San Jose, CA in Silicon Valley.",
+                "id": 2,
+                "image": "https://www.india.com/wp-content/uploads/2016/04/184.jpg",
+                "title": "F8 VIEWING PARTY",
+                "userId": 1,
+              },
+            ]
+          }
+          getEventsAction={[MockFunction]}
+        />
+      </Provider>,
+      "_firstWorkInProgressHook": null,
+      "_forcedUpdate": false,
+      "_instance": [Circular],
+      "_isReRender": false,
+      "_newState": null,
+      "_numberOfReRenders": 0,
+      "_renderPhaseUpdates": null,
+      "_rendered": <Context.Provider
+        value={
+          Object {
+            "store": Object {
+              "clearActions": [Function],
+              "dispatch": [Function],
+              "getActions": [Function],
+              "getState": [Function],
+              "replaceReducer": [Function],
+              "subscribe": [Function],
+            },
+            "subscription": Subscription {
+              "handleChangeWrapper": [Function],
+              "listeners": Object {
+                "clear": [Function],
+                "get": [Function],
+                "notify": [Function],
+                "subscribe": [Function],
+              },
+              "onStateChange": [Function],
+              "parentSub": undefined,
+              "store": Object {
+                "clearActions": [Function],
+                "dispatch": [Function],
+                "getActions": [Function],
+                "getState": [Function],
+                "replaceReducer": [Function],
+                "subscribe": [Function],
+              },
+              "unsubscribe": [Function],
+            },
+          }
+        }
+      >
+        <Memo(ConnectFunction)
+          events={
+            Array [
+              Object {
+                "body": "Come through and attend an awesome meetup. Q&A session too",
+                "id": 1,
+                "image": "https://cdn-images-1.medium.com/max/2600/1*kuyLm10Ry7fi-KlBB9MU3w.jpeg",
+                "title": "ALC LAUNCH",
+                "userId": 1,
+              },
+              Object {
+                "body": "Facebook F8 is a mostly-annual conference held by Facebook, intended for developers and entrepreneurs who build products and services around the website. It was hosted in the San Francisco Bay Area, California, and is now hosted in San Jose, CA in Silicon Valley.",
+                "id": 2,
+                "image": "https://www.india.com/wp-content/uploads/2016/04/184.jpg",
+                "title": "F8 VIEWING PARTY",
+                "userId": 1,
+              },
+            ]
+          }
+          getEventsAction={[MockFunction]}
+        />
+      </Context.Provider>,
+      "_rendering": false,
+      "_updater": [Circular],
+      "_workInProgressHook": null,
+    },
+  },
+}
+`;
+
 exports[`App renders the login component 1`] = `null`;
 
 exports[`App should render without crashing 1`] = `
@@ -35,7 +227,11 @@ App {
       "_newState": null,
       "_numberOfReRenders": 0,
       "_renderPhaseUpdates": null,
-      "_rendered": <Routes />,
+      "_rendered": <div>
+        <div>
+          <Routes />
+        </div>
+      </div>,
       "_rendering": false,
       "_updater": [Circular],
       "_workInProgressHook": null,

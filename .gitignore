@@ -23,5 +23,6 @@ chrome-user-data
 .vscode
 *.swp
 *.swo
-src/styles/*map
-
+dist/
+src/styles/*.map
+.env

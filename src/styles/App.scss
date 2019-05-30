@@ -1,4 +1,124 @@
+// landing page
 h2 {
     color: #1b7999;
     text-align: center;
   }
+
+div {
+  font-family: Quantico;
+} 
+
+
+.inner {
+  width: 94%;
+  margin: 2%;
+}
+
+.card-content {
+  text-align: right;
+}
+
+.card-date {
+  float: left;
+  text-align: left;
+  font-style: italic;
+}
+
+.event-card {
+  text-align: left;
+  float: left;
+  width: 70%;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+}
+
+.img-tile {
+  float: right;
+  width: 27%;
+  margin-left: 1%;
+}
+
+.events {
+  float: left;
+  width: 45%;
+  text-align: center;
+  height: 100%;
+  margin-left: 5%;
+  min-width: 250px;
+}
+
+.tile {
+  height: 300px;
+}
+
+.nav-links {
+  color: white;
+}
+
+.nav-div {
+  margin-left: 2%;
+}
+
+.event {
+  width: 90%;
+  float: left;
+  margin-left: 5%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  min-width: 230px;
+  border-bottom-style: solid;
+  border-radius: 10px;
+  border-width: 1px;
+  border-color: rgb(200, 200, 200);
+}
+
+a {
+  text-decoration: none;
+}
+
+  @media only screen and (max-width: 600px) {
+  .event {
+    width: 80%;
+    float: none;
+    margin-left: 10%;
+  }
+
+.img-tile {
+    margin: 10px 2% 10px 2%;
+    width: 80%;
+    float: none;
+  }
+}
+
+// navbar
+.search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .search-container {
+    float: none;
+  }
+  .collapse input[type=text], .collapse .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .collapse input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
