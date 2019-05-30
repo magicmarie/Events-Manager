@@ -3,9 +3,9 @@ import { BrowserRouter, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "../js/store/index";
 import Login from "./Auth/Login";
-import SignUp from "./Auth/Signup";
 import Home from "./home";
 import Navbar from "../components/navBar";
+import RegisterContainer from '../containers/RegisterContainer'
 
 class Routes extends Component {
   render() {
@@ -14,8 +14,8 @@ class Routes extends Component {
         <BrowserRouter>
           <Navbar />
           <Route exact path="/" component={Home} />
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/signup" component={SignUp} />
+          <Route path="/login" component={Login} />
+          <Route path="/signup" component={RegisterContainer} />
         </BrowserRouter>
       </Provider>
     );

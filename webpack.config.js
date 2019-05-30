@@ -6,7 +6,15 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
+          loader: "babel-loader",
+          options: {
+            plugins: {
+              babelrcRoots: [
+                "@babel/transform-runtime",
+                "@babel/plugin-proposal-class-properties"
+              ]
+            }
+          }
         }
       },
       {
@@ -19,10 +27,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [
-            "style-loader", "css-loader",
-        ]
-
+        use: ["style-loader", "css-loader"]
       },
       {
         test: /\.(s*)css$/,
@@ -37,8 +42,7 @@ module.exports = {
             loader: "sass-loader" // compiles Sass to CSS
           }
         ]
-
-      },
+      }
     ]
   },
   plugins: [
@@ -47,7 +51,7 @@ module.exports = {
       filename: "./index.html"
     })
   ],
-  devServer:{
-    historyApiFallback:true
-}
+  devServer: {
+    historyApiFallback: true
+  }
 };
