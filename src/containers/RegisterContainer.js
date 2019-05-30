@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import SignupComponent from "../components/Auth/Signup";
 import { registerUser } from "../js/actions/postUser";
-import { passwordValidate, validEmailRegex } from "../utils/regex";
 
 export class RegisterContainer extends Component {
   constructor(props) {
@@ -50,7 +49,13 @@ export class RegisterContainer extends Component {
   }
 }
 
+<<<<<<< HEAD
 export const mapStateToProps = () => ({
+=======
+export const mapStateToProps = state => ({
+  success: state.auth.success,
+  error: state.auth.error
+>>>>>>> implement registration of a user
 });
 RegisterContainer.propTypes = {
   success: PropTypes.object,
