@@ -6,7 +6,7 @@ const signedInLinks = () => (
 <div>
 <ul className="nav navbar-nav mr-auto">
     <li className="nav-item">
-        <NavLink className="nav-link" activeClassName="active" to="#">
+        <NavLink className="nav-link" activeClassName="active" to="/create_event">
         New Event
         </NavLink>
     </li>

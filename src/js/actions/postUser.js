@@ -6,8 +6,8 @@ export const registerUser = ({ username, email, password}) => {
     return firebase.auth().createUserWithEmailAndPassword(email, password)
       .then((response) => {
         return firebase.firestore().collection('Users').doc(response.user.uid).set({
-          username: username,
-          email: email,
+          username,
+          email,
         });
       }).then( ()=> {
         dispatch({

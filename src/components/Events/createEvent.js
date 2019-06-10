@@ -1,3 +1,4 @@
+import React from "react";
 import "../../styles/App.scss";
 
 const CreateEvent = props => {
@@ -50,9 +51,6 @@ const CreateEvent = props => {
                 name="tags"
                 id="tags"
               />
-              <div>
-                <i>Separate your tags with a comma</i>
-              </div>
             </div>
             <div className="image-div">
               <div className="actual-image">
@@ -65,10 +63,8 @@ const CreateEvent = props => {
                 id="images"
               />
             </div>
-
-             <input name="image" />
             <div className="form-group">
-              <button onClick={onSubmit} className="btn btn-primary">
+              <button onClick={onSubmit} className="btn btn-primary margin-set">
                 Publish Event
               </button>
             </div>

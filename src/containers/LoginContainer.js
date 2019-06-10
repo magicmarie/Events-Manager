@@ -11,7 +11,6 @@ export class Login extends Component {
   };
 
   componentWillReceiveProps(nextProps) {
-    console.log(nextProps);
     if(nextProps.authError) {
       alert(nextProps.authError);
       } 
@@ -39,7 +38,6 @@ export class Login extends Component {
         <UserLogin
           password={password}
           email={email}
-     
           handleOnChange={this.handleOnchange}
           handleLogin={this.handleOnSubmit}
         />

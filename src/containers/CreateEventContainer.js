@@ -15,6 +15,16 @@ export class CreateEvents extends Component {
     };
   }
 
+  componentWillReceiveProps(nextProps) {
+    if(nextProps.authError) {
+      alert(nextProps.eventError);
+      } 
+    if(nextProps.authSuccess) {
+      alert(nextProps.eventSuccess);
+      this.props.history.push("/#");
+      }
+   }
+
   handleOnchange = event => {
     event.preventDefault()
     this.setState({
@@ -23,10 +33,8 @@ export class CreateEvents extends Component {
   };
   handleOnSubmit = event => {
     event.preventDefault();
-    Promise.resolve(this.props.createEvent(this.state)).
-    then(
-      this.props.history.push("/Events")
-    );
+    console.log(this.state, "nieuwhjdf9uhewidfshdifwhd");
+    // this.props.createEvent(this.state);
   };
 
   render() {
@@ -48,8 +56,8 @@ export class CreateEvents extends Component {
   }
 }
 
-export const mapStateToProps = () => ({
-});
+export const mapStateToProps = () => ({});
+
 CreateEvents.propTypes = {
   success: PropTypes.object,
   error: PropTypes.object,

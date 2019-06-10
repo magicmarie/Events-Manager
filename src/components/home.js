@@ -26,7 +26,7 @@ export class Home extends Component {
 }
 
 export const mapStateToProps = state => ({
-  events: state.getEventsReducer.events
+  events: state.eventsReducer.events
 });
 // connects a react component to a redux store
 export default connect(

@@ -1,5 +1,5 @@
 const initState = {
-    authError: undefined,
+    authError: null,
     authSuccess: null
   }
   

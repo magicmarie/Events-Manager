@@ -1,4 +1,4 @@
-import getEventsReducer from "../../src/js/reducers/getEventsReducer";
+import eventsReducer from "../../src/js/reducers/eventsReducer";
 import { FETCH_EVENTS_SUCCESS } from "../../src/js/actions/types";
 import events from "../mock_data/moxios_mock";
 
@@ -10,7 +10,7 @@ describe("App", () => {
     events: events
   };
   it("Should handle reducers after getting events", () => {
-    const newState = getEventsReducer(initialState, {
+    const newState = eventsReducer(initialState, {
       type: FETCH_EVENTS_SUCCESS,
       payload: events
     });
@@ -18,7 +18,7 @@ describe("App", () => {
   });
 
   it("Should handle reducers initial state", () => {
-    const newState = getEventsReducer(initialState, {
+    const newState = eventsReducer(initialState, {
       type: "UN_DEFINED_TYPE_TO_RETURN_DEFAULT",
       payload: events
     });
