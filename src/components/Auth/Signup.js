@@ -25,13 +25,13 @@ const SignUp = ({
         <div className="col-md-4 register-left">
           <div className="text-center social-btn">
             <a href="#" className="btn btn-primary btn-block">
-              <i className="fa fa-facebook" /> Sign in with <b>Facebook</b>
+              <i className="fa fa-facebook" /> Sign up with <b>Facebook</b>
             </a>
             <a href="#" className="btn btn-info btn-block">
-              <i className="fa fa-twitter" /> Sign in with <b>Twitter</b>
+              <i className="fa fa-twitter" /> Sign up with <b>Twitter</b>
             </a>
             <a href="#" className="btn btn-danger btn-block">
-              <i className="fa fa-google" /> Sign in with <b>Google</b>
+              <i className="fa fa-google" /> Sign up with <b>Google</b>
             </a>
           </div>
         </div>

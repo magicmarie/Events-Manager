@@ -8,12 +8,10 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
-            plugins: {
-              babelrcRoots: [
+            plugins: [
                 "@babel/transform-runtime",
-                "@babel/plugin-proposal-class-properties"
+                "@babel/plugin-proposal-class-properties",
               ]
-            }
           }
         }
       },
