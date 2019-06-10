@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import SignupComponent from "../components/Auth/Signup";
 import { registerUser } from "../js/actions/postUser";
 import { passwordValidate, validEmailRegex } from "../utils/regex";
-import { validateForm } from "../utils/formValidate";
 
 export class RegisterContainer extends Component {
   constructor(props) {
@@ -51,9 +50,7 @@ export class RegisterContainer extends Component {
   }
 }
 
-export const mapStateToProps = state => ({
-  success: state.auth.success,
-  error: state.auth.error
+export const mapStateToProps = () => ({
 });
 RegisterContainer.propTypes = {
   success: PropTypes.object,
