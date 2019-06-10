@@ -4,9 +4,9 @@ const initialState = {
   users: []
 };
 
-const getEventsReducer = (state = initialState, action) => {
+const loginUserReducer = (state = initialState, action) => {
   switch (action.type) {
-    case FETCH_EVENTS_SUCCESS:
+    case POST_USER_SUCCESS:
       return {
         ...state,
         events: action.payload
@@ -16,4 +16,4 @@ const getEventsReducer = (state = initialState, action) => {
   }
 };
 
-export default getEventsReducer;
+export default postUserReducer;
