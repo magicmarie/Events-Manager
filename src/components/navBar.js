@@ -29,6 +29,11 @@ const Navbar = () => (
             Get Started
           </NavLink>
         </li>
+        <li className="nav-item">
+          <NavLink className="nav-link" activeClassName="active" to="/signup">
+            New Event
+          </NavLink>
+        </li>
       </ul>
     </div>
   </nav>

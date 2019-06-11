@@ -5,7 +5,8 @@ import store from "../js/store/index";
 import Login from "./Auth/Login";
 import Home from "./home";
 import Navbar from "../components/navBar";
-import RegisterContainer from '../containers/RegisterContainer'
+import Register from '../containers/RegisterContainer';
+import CreateEvent from "../containers/CreateEventContainer";
 
 class Routes extends Component {
   render() {
@@ -15,7 +16,8 @@ class Routes extends Component {
           <Navbar />
           <Route exact path="/" component={Home} />
           <Route path="/login" component={Login} />
-          <Route path="/signup" component={RegisterContainer} />
+          <Route path="/signup" component={Register} />
+          <Route path="/create_event" component={CreateEvent} />
         </BrowserRouter>
       </Provider>
     );
