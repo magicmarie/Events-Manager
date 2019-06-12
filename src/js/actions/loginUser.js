@@ -1,7 +1,7 @@
 import axiosInstance from "../axiosInstance/axiosInstance";
 import { LOGIN_USER_SUCCESS } from "./types";
 
-export const registerUser = data => dispatch => {
+export const loginUser = data => dispatch => {
   return axiosInstance
     .post("/Users", {data})
     .then(response => {

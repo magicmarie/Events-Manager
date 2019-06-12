@@ -50,7 +50,7 @@ export class CreateEvents extends Component {
 
 export const mapStateToProps = () => ({
 });
-RegisterContainer.propTypes = {
+CreateEvents.propTypes = {
   success: PropTypes.object,
   error: PropTypes.object,
   createEvent: PropTypes.func,

@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import SignupComponent from "../components/Auth/Signup";
+import UserSignup from "../components/Auth/Signup";
 import { registerUser } from "../js/actions/postUser";
 
-export class RegisterContainer extends Component {
+export class Register extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -16,24 +16,27 @@ export class RegisterContainer extends Component {
   }
 
   handleOnchange = event => {
-    event.preventDefault()
+    event.preventDefault();
     this.setState({
       [event.target.name]: event.target.value
     });
   };
   handleOnSubmit = event => {
     event.preventDefault();
-    Promise.resolve(this.props.registerUser(this.state)).
-    then(
-      this.props.history.push("/login")
-    );
+    console.log(this.state.email, this.state.password);
+    doCreateUserWithEmailAndPassword(this.state.email, this.state.password);
+
+    // Promise.resolve(this.props.registerUser(this.state)).
+    // then(
+    //   this.props.history.push("/login")
+    // );
   };
 
   render() {
     const { username, password, confirmPassword, email, errors } = this.state;
     return (
       <div>
-        <SignupComponent
+        <UserSignup
           username={username}
           isRegistering={this.props.isRegistering}
           password={password}
@@ -62,4 +65,4 @@ RegisterContainer.propTypes = {
 export default connect(
   mapStateToProps,
   { registerUser }
-)(RegisterContainer);
+)(Register);

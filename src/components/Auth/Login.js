@@ -76,7 +76,7 @@ const Login = ({
                   <input
                     type="submit"
                     className="btnRegister"
-                    value="Register"
+                    value="Login"
                   />
                 </div>
                 <div className="reminder">

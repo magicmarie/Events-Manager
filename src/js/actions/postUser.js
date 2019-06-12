@@ -1,9 +1,8 @@
-import axiosInstance from "../axiosInstance/axiosInstance";
 import { POST_USER_SUCCESS } from "./types";
+import { addUser } from "../../firebase/data";
 
 export const registerUser = data => dispatch => {
-  return axiosInstance
-    .post("/Users", {data})
+  addUser(data)
     .then(response => {
       dispatch({
         type: POST_USER_SUCCESS,

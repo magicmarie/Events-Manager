@@ -1,4 +1,6 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const Dotenv = require("dotenv-webpack");
+
 module.exports = {
   module: {
     rules: [
@@ -9,9 +11,9 @@ module.exports = {
           loader: "babel-loader",
           options: {
             plugins: [
-                "@babel/transform-runtime",
-                "@babel/plugin-proposal-class-properties",
-              ]
+              "@babel/transform-runtime",
+              "@babel/plugin-proposal-class-properties"
+            ]
           }
         }
       },
@@ -47,7 +49,8 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: "./src/index.html",
       filename: "./index.html"
-    })
+    }),
+    new Dotenv()
   ],
   devServer: {
     historyApiFallback: true

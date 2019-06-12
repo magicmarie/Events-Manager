@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import LoginComponent from "../components/Auth/Login";
+import UserLogin from "../components/Auth/Login";
 import { loginUser } from "../js/actions/loginUser";
 
-export class LoginContainer extends Component {
+export class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -32,7 +32,7 @@ export class LoginContainer extends Component {
     const { username, password, email, errors } = this.state;
     return (
       <div>
-        <LoginComponent
+        <UserLogin
           username={username}
           password={password}
           email={email}
@@ -49,7 +49,7 @@ export const mapStateToProps = state => ({
   success: state.auth.success,
   error: state.auth.error
 });
-RegisterContainer.propTypes = {
+Login.propTypes = {
   success: PropTypes.object,
   error: PropTypes.object,
   registerUser: PropTypes.func,
@@ -60,4 +60,4 @@ RegisterContainer.propTypes = {
 export default connect(
   mapStateToProps,
   { loginUser }
-)(LoginContainer);
+)(Login);
