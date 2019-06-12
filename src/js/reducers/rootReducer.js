@@ -7,5 +7,6 @@ export default combineReducers({
     if (state == null) state = [];
     return state;
   },
-  getEventsReducer
+  getEventsReducer, 
+  auth: authReducer
 });

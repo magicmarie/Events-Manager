@@ -227,11 +227,7 @@ App {
       "_newState": null,
       "_numberOfReRenders": 0,
       "_renderPhaseUpdates": null,
-      "_rendered": <div>
-        <div>
-          <Routes />
-        </div>
-      </div>,
+      "_rendered": <Routes />,
       "_rendering": false,
       "_updater": [Circular],
       "_workInProgressHook": null,
