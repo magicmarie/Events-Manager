@@ -1,4 +1,4 @@
-import { POST_USER_SUCCESS } from "../actions/types";
+import { LOGIN_USER_SUCCESS } from "../actions/types";
 
 const initialState = {
   users: []
@@ -6,7 +6,7 @@ const initialState = {
 
 const loginUserReducer = (state = initialState, action) => {
   switch (action.type) {
-    case POST_USER_SUCCESS:
+    case LOGIN_USER_SUCCESS:
       return {
         ...state,
         events: action.payload
@@ -16,4 +16,4 @@ const loginUserReducer = (state = initialState, action) => {
   }
 };
 
-export default postUserReducer;
+export default loginUserReducer;
