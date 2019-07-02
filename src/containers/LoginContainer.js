@@ -5,38 +5,41 @@ import UserLogin from "../components/Auth/Login";
 import { loginUser } from "../js/actions/loginUser";
 
 export class Login extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      username: "",
-      email: "",
-      password: "",
-    };
-  }
+  state = {
+    email: "",
+    password: "",
+  };
 
+  componentWillReceiveProps(nextProps) {
+    console.log(nextProps);
+    if(nextProps.authError) {
+      alert(nextProps.authError);
+      } 
+    if(nextProps.authSuccess) {
+      alert(nextProps.authSuccess);
+      this.props.history.push("/dashboard");
+      }
+   }
   handleOnchange = event => {
-    event.preventDefault()
+    event.preventDefault();
     this.setState({
       [event.target.name]: event.target.value
     });
   };
   handleOnSubmit = event => {
     event.preventDefault();
-    Promise.resolve(this.props.loginUser(this.state)).
-    then(
-      this.props.history.push("/")
-    );
+    this.props.loginUser(this.state);
   };
 
   render() {
-    const { username, password, email, errors } = this.state;
+    const { authError } = this.props;
+    const { password, email } = this.state;
     return (
       <div>
         <UserLogin
-          username={username}
           password={password}
           email={email}
-          errors={errors}
+     
           handleOnChange={this.handleOnchange}
           handleLogin={this.handleOnSubmit}
         />
@@ -45,16 +48,16 @@ export class Login extends Component {
   }
 }
 
-export const mapStateToProps = state => ({
-  success: state.auth.success,
-  error: state.auth.error
+export const mapStateToProps = ({ firebase, auth}) => ({
+  auth: firebase.auth,
+  authError: auth.authError
 });
+
 Login.propTypes = {
   success: PropTypes.object,
   error: PropTypes.object,
-  registerUser: PropTypes.func,
-  username: PropTypes.string,
-  email: PropTypes.string
+  loginUser: PropTypes.func,
+  
 };
 
 export default connect(

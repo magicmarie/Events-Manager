@@ -15,6 +15,15 @@ export class Register extends Component {
     };
   }
 
+  componentWillReceiveProps(nextProps) {
+    if(nextProps.authError) {
+      alert(nextProps.authError);
+      } else {
+      alert(nextProps.authSuccess);
+      this.props.history.push("/login");
+      }
+   }
+
   handleOnchange = event => {
     event.preventDefault();
     this.setState({
@@ -23,13 +32,7 @@ export class Register extends Component {
   };
   handleOnSubmit = event => {
     event.preventDefault();
-    console.log(this.state.email, this.state.password);
-    doCreateUserWithEmailAndPassword(this.state.email, this.state.password);
-
-    // Promise.resolve(this.props.registerUser(this.state)).
-    // then(
-    //   this.props.history.push("/login")
-    // );
+    this.props.registerUser(this.state);
   };
 
   render() {
@@ -52,17 +55,21 @@ export class Register extends Component {
   }
 }
 
-export const mapStateToProps = () => ({
-});
-RegisterContainer.propTypes = {
+const mapStateToProps = (state) => {
+  return {
+    auth: state.firebase.auth,
+    authError: state.auth.authError,
+    authSuccess: state.auth.authSuccess
+  }
+};
+
+ Register.propTypes = {
   success: PropTypes.object,
   error: PropTypes.object,
   registerUser: PropTypes.func,
-  username: PropTypes.string,
-  email: PropTypes.string
 };
 
-export default connect(
+ export default connect(
   mapStateToProps,
-  { registerUser }
+  {registerUser},
 )(Register);

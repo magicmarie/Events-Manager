@@ -3,10 +3,8 @@ import { Link } from "react-router-dom";
 import "../../styles/App.scss";
 
 const Login = ({
-  username,
-  password,
   email,
-  confirmPassword,
+  password,
   handleOnChange,
   handleLogin
 }) => {
@@ -46,15 +44,6 @@ const Login = ({
             >
               <form className="row register-form" onSubmit={handleLogin}>
                 <div className="col-md-10">
-                  <div className="form-group">
-                    <input
-                      type="text"
-                      name="username"
-                      onChange={handleOnChange}
-                      className="form-control"
-                      placeholder="User Name *"
-                    />
-                  </div>
                   <div className="form-group">
                     <input
                       type="email"

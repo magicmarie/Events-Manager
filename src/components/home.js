@@ -10,10 +10,10 @@ export class Home extends Component {
 
   render() {
     const events = this.props.events;
-    const eventsList = events.length ? (
+    const eventsList = events.length > 0 ? (
       events.map(event => {
         return (
-        <div key ={event.id}>
+        <div key={event.id}>
           <Event event={event} />
         </div>);
       }

@@ -1,4 +1,6 @@
-import {combineReducers} from 'redux';
+import { combineReducers } from 'redux';
+import { firestoreReducer } from "redux-firestore";
+import { firebaseReducer } from "react-redux-firebase";
 import authReducer from './authReducer';
 import getEventsReducer from './getEventsReducer';
 
@@ -8,5 +10,7 @@ export default combineReducers({
     return state;
   },
   getEventsReducer, 
-  auth: authReducer
+  auth: authReducer,
+  firestore: firestoreReducer,
+  firebase: firebaseReducer
 });

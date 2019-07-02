@@ -54,5 +54,12 @@ module.exports = {
   ],
   devServer: {
     historyApiFallback: true
+  },
+  node: {
+    fs: 'empty',
+    net: 'empty',
+    tls: 'empty',
+    http2: 'empty',
+    child_process: 'empty'
   }
 };
