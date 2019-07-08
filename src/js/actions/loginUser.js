@@ -1,14 +1,19 @@
-import axiosInstance from "../axiosInstance/axiosInstance";
-import { LOGIN_USER_SUCCESS } from "./types";
+import { LOGIN_USER_SUCCESS, LOGIN_USER_ERROR } from "./types";
+import firebase from "../../firebase/Firebase";
 
-export const registerUser = data => dispatch => {
-  return axiosInstance
-    .post("/Users", {data})
-    .then(response => {
+export const loginUser = ({email, password}) => {
+  return (dispatch) => {
+    firebase.auth().signInWithEmailAndPassword(email, password)
+    .then(() => {
       dispatch({
         type: LOGIN_USER_SUCCESS,
-        payload: response.data
+        authSuccess: 'logged in successfully'
       });
     })
-    .catch(error => console.log(error));
+    .catch(error => {
+      dispatch({
+        type: LOGIN_USER_ERROR, error
+      });
+    });
+  };
 };

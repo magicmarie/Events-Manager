@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import SignupComponent from "../components/Auth/Signup";
+import UserSignup from "../components/Auth/Signup";
 import { registerUser } from "../js/actions/postUser";
 
-export class RegisterContainer extends Component {
+export class Register extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -15,25 +15,31 @@ export class RegisterContainer extends Component {
     };
   }
 
+  componentWillReceiveProps(nextProps) {
+    if(nextProps.authError) {
+      alert(nextProps.authError);
+      } else {
+      alert(nextProps.authSuccess);
+      this.props.history.push("/login");
+      }
+   }
+
   handleOnchange = event => {
-    event.preventDefault()
+    event.preventDefault();
     this.setState({
       [event.target.name]: event.target.value
     });
   };
   handleOnSubmit = event => {
     event.preventDefault();
-    Promise.resolve(this.props.registerUser(this.state)).
-    then(
-      this.props.history.push("/login")
-    );
+    this.props.registerUser(this.state);
   };
 
   render() {
     const { username, password, confirmPassword, email, errors } = this.state;
     return (
       <div>
-        <SignupComponent
+        <UserSignup
           username={username}
           isRegistering={this.props.isRegistering}
           password={password}
@@ -49,17 +55,21 @@ export class RegisterContainer extends Component {
   }
 }
 
-export const mapStateToProps = () => ({
-});
-RegisterContainer.propTypes = {
+const mapStateToProps = (state) => {
+  return {
+    auth: state.firebase.auth,
+    authError: state.auth.authError,
+    authSuccess: state.auth.authSuccess
+  }
+};
+
+ Register.propTypes = {
   success: PropTypes.object,
   error: PropTypes.object,
   registerUser: PropTypes.func,
-  username: PropTypes.string,
-  email: PropTypes.string
 };
 
-export default connect(
+ export default connect(
   mapStateToProps,
-  { registerUser }
-)(RegisterContainer);
+  {registerUser},
+)(Register);
